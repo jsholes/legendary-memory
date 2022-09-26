@@ -22,10 +22,10 @@
 #   instance_type     = "t2.micro"
 # }
 
-resource "aws_key_pair" "mtc_auth" {
-  keypair_name   = var.keypair_name
-  public_key = file("/mnt/workspace/mtckey.pub")
-}
+# resource "aws_key_pair" "mtc_auth" {
+#   keypair_name   = var.keypair_name
+#   public_key = file("/mnt/workspace/mtckey.pub")
+# }
 
 module "sst" {
   source = "./sst"
