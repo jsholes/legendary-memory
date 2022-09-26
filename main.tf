@@ -12,6 +12,7 @@ resource "aws_key_pair" "mtc_auth" {
 
 module "sst" {
   source = "./sst"
+  version = "1.0.2"
   keypair_name = aws_key_pair.mtc_auth.id
 }
 
