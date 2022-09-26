@@ -5,10 +5,6 @@ variable "host_os" {
 }
 
 variable "aws_region" {
-  type = string
+  type    = string
   default = "us-east-1"
-}
-
-variable "keypair_name" {
-  type = string
 }
