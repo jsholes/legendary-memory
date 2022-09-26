@@ -3,11 +3,14 @@ terraform {
     aws = {
       source = "hashicorp/aws"
     }
+    aviatrix = {
+      source  = "AviatrixSystems/aviatrix"
+      version = "2.24.0"
+    }
   }
 }
 
 provider "aws" {
   region = var.aws_region
-  #shared_credentials_file = "~/.aws/credentials"
   profile = "vscode"
 }
