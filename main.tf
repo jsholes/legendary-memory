@@ -23,11 +23,10 @@
 # }
 
 resource "aws_key_pair" "mtc_auth" {
-  keypair_name   = var.key_name
+  keypair_name   = var.keypair_name
   public_key = file("/mnt/workspace/mtckey.pub")
 }
 
 module "sst" {
   source = "./sst"
-  keypair_name = "jeremiah-key"
 }
