@@ -1,10 +1,9 @@
-module "sst" {
-  source       = "terraform-aviatrix-modules/aws-sandbox-starter/aviatrix"
-  version      = "1.0.2"
-  keypair_name = "jeremiah-keypair"
-}
+resource "aws_vpc" "mtc_vpc" {
+  cidr_block = "10.123.0.0/16"
+  enable_dns_hostnames = true 
+  enable_dns_support = true
 
-output "sandbox_starter_url" {
-  description = "The url for the sst instance"
-  value       = "https://${module.sst.ip}"
+  tags = {
+    Name = "mtc_vpc"
+  }
 }
